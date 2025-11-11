@@ -195,12 +195,44 @@
       border-bottom: none;
     }
 
+    /* ===== BOTTOM BOXES ===== */
+    .bottom-boxes {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .box {
+      flex: 1;
+      background-color: #fffef5;
+      border: 1px solid #d4aa00;
+      padding: 1rem;
+      border-radius: 4px;
+    }
+
+    .box h3 {
+      font-size: 1rem;
+      color: #222;
+      border-bottom: 1px solid #e6c300;
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .box p {
+      font-size: 0.9rem;
+      color: #333;
+      line-height: 1.5;
+    }
+
     @media (max-width: 768px) {
       .search-form {
         grid-template-columns: 1fr;
       }
       .dashboard-stats {
         grid-template-columns: 1fr 1fr;
+      }
+      .bottom-boxes {
+        flex-direction: column;
       }
     }
   </style>
@@ -281,6 +313,18 @@
           <span>2 days ago</span>
         </li>
       </ul>
+    </div>
+
+    <!-- ===== BOTTOM SECTION ===== -->
+    <div class="bottom-boxes">
+      <div class="box">
+        <h3>CSR Script</h3>
+        <p>Hello, thank you for calling Synchrony Financial. My name is John — how can I assist you today? Could you please verify your account number and the last four digits of your SSN?</p>
+      </div>
+      <div class="box">
+        <h3>CSR Message</h3>
+        <p>In this scenario, the CSR must collect the customer’s account number, last name, and last 4 digits of SSN to locate the account before proceeding further.</p>
+      </div>
     </div>
   </div>
 
